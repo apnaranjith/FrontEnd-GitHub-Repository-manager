@@ -1,0 +1,41 @@
+import React, { useEffect, useState } from 'react';
+import axios from 'axios';
+import { useParams, Link } from 'react-router-dom';
+
+const RepositoryDetails = () => {
+  const { username, repoName } = useParams();
+  const [repoDetails, setRepoDetails] = useState(null);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const fetchRepoDetails = async () => {
+      try {
+        const response = await axios.get(`http://localhost:5000/api/github/repository/${username}/${repoName}`);
+        setRepoDetails(response.data);
+        setLoading(false);
+      } catch (error) {
+        console.error(error);
+        setLoading(false);
+      }
+    };
+
+    fetchRepoDetails();
+  }, [username, repoName]);
+
+  return (
+    <div>
+      {loading ? <p>Loading...</p> : (
+        <div>
+          <h3>{repoDetails.name}</h3>
+          <p>{repoDetails.description}</p>
+          <p><strong>Language:</strong> {repoDetails.language}</p>
+          <p><strong>Forks:</strong> {repoDetails.forks}</p>
+          <p><strong>Stars:</strong> {repoDetails.stargazers_count}</p>
+          <Link to={`/repositories/${username}`}>Back to Repositories</Link>
+        </div>
+      )}
+    </div>
+  );
+};
+
+export default RepositoryDetails;

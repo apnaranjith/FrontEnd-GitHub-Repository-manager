@@ -1,0 +1,99 @@
+.repository-details {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    color: #333;
+  }
+  
+  .repository-container {
+    display: flex;
+    gap: 20px;
+  }
+  
+  .repository-left {
+    flex: 1;
+    max-width: 300px;
+    text-align: center;
+  }
+  
+  .repository-icon {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+  }
+  
+  .verified-badge {
+    background-color: #e6f7e6;
+    border: 1px solid #c1e1c1;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 14px;
+    margin-bottom: 15px;
+  }
+  
+  .verified-badge span {
+    color: #2e7d32;
+    font-weight: bold;
+  }
+  
+  .categories {
+    margin-top: 15px;
+    text-align: left;
+  }
+  .categories p{
+    color:white;
+
+  }
+  
+  .category-badge {
+    display: inline-block;
+    background-color: #f0f0f0;
+    color: #555;
+    padding: 5px 10px;
+    margin: 5px 5px 0 0;
+    border-radius: 20px;
+    font-size: 12px;
+  }
+  
+  .repository-right {
+    flex: 2;
+    padding: 0 10px;
+  }
+  
+  .repository-right h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color:white;
+  }
+  
+  .cta-button {
+    display: inline-block;
+    margin: 10px 0;
+    padding: 10px 15px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .cta-button:hover {
+    background-color: #0056b3;
+  }
+  
+  .repository-right p {
+    margin: 10px 0;
+    color:white;
+  }
+  
+  .back-link {
+    display: inline-block;
+    margin-top: 20px;
+    color: #007bff;
+    text-decoration: none;
+  }
+  
+  .back-link:hover {
+    text-decoration: underline;
+  }
+  
